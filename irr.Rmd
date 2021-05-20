@@ -348,6 +348,16 @@ tab1 %>%
   bind_rows(tab4) %>% 
   bind_rows(tab5) %>% 
   bind_rows(tab6) %>% 
+  knitr::kable()
+```
+
+```{r}
+tab1 %>% 
+  bind_rows(tab2) %>% 
+  bind_rows(tab3) %>% 
+  bind_rows(tab4) %>% 
+  bind_rows(tab5) %>% 
+  bind_rows(tab6) %>% 
   ggplot(aes(x = round, y = kappa, group = code, color = code)) +
   geom_point() +
   geom_line() +
